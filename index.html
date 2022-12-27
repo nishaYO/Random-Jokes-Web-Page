@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JOKES</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      main {
+        background: aqua;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .txt {
+        font-size: xx-large;
+        font-weight: bolder;
+        margin: 10%;
+      }
+
+      .btn {
+        background: rgb(236, 193, 51);
+        color: white;
+        font-size: large;
+        font-weight: 700;
+        padding: 20px;
+        width: auto;
+        border-radius: 5%;
+        border: 5px solid white;
+        transition: transform 0.5s 0.2s;
+      }
+
+      .btn:active {
+        transform: scale(0.8, 0.8); /*decrease size when clicked*/
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- creating a jokes container -->
+      <div class="txt"></div>
+      <!-- creating a click button -->
+      <button class="btn">ANOTHER ONE</button>
+    </main>
+    
+    <script>
+    
+      // creating a jokes array
+      let jokes_arr = [
+        "What do you call a boomerang that won’t come back?<br>A stick.",
+        "What does a cloud wear under his raincoat?<br>Thunderwear.",
+        "Two pickles fell out of a jar onto the floor. What did one say to the other?<br>Dill with it.",
+        "What time is it when the clock strikes 13?<br>Time to get a new clock.",
+        "How does a cucumber become a pickle?<br>It goes through a jarring experience.",
+        "What did one toilet say to the other?<br>You look a bit flushed.",
+        "What do you think of that new diner on the moon?<br>Food was good, but there really wasn’t much atmosphere.",
+        "Why did the dinosaur cross the road?<br>Because the chicken wasn’t born yet.",
+        "Why can’t Elsa from Frozen have a balloon?<br>Because she will let it go, let it go.",
+        " What musical instrument is found in the bathroom?<br>A tuba toothpaste.",
+        "Why did the kid bring a ladder to school?<br>Because she wanted to go to high school.",
+        " What do you call a dog magician?<br>A labracadabrador.",
+        " Where would you find an elephant?<br>The same place you lost her.",
+        " How do you get a squirrel to like you?<br>Act like a nut.",
+        " What do you call two birds in love?<br>Tweethearts",
+        " How does a scientist freshen her breath?<br>With experi-mints.",
+        " How are false teeth like stars?<br>They come out at night.",
+        " What building in your town has the most stories?<br>The public library.",
+        " What’s worse than finding a worm in your apple?<br>Finding half a worm.",
+        " What is a computer's favorite snack?<br>Computer chips.",
+        " What did one volcano say to the other?<br>I lava you.",
+        " How do we know that the ocean is friendly?<br>It waves.",
+        " What is a tornado’s favorite game to play?<br>Twister.",
+        " How does the moon cut his hair?<br>Eclipse it.",
+        " How do you talk to a giant?<br>Use big words.",
+        " What animal is always at a baseball game?<br>A bat.",
+        " What falls in winter but never gets hurt?<br>Snow.",
+        " What did the Dalmatian say after lunch?<br>That hit the spot.",
+        " Why did the kid cross the playground?<br>To get to the other slide.",
+        " What do you call a droid that takes the long way around?<br>R2 detour.",
+        " Why did the cookie go to the hospital?<br>Because he felt crummy.",
+        " Why was the baby strawberry crying?<br>Because her mom and dad were in a jam.",
+        " What did the little corn say to the mama corn?<br>Where is pop corn?",
+        " How do you make a lemon drop?<br>Just let it fall.",
+        " What did the limestone say to the geologist?<br>Don’t take me for granite.",
+        " Why does a seagull fly over the sea?<br>Because if it flew over the bay, it would be a baygull.",
+        " What kind of water can’t freeze?<br>Hot water.",
+        " What kind of tree fits in your hand?<br>A palm tree.",
+        " What do you call a dinosaur that is sleeping?<br>A dino-snore.",
+        " What is fast, loud and crunchy?<br>A rocket chip.",
+        " Why did the teddy bear say no to dessert?<br>Because she was stuffed.",
+        " What has ears but cannot hear?<br>A cornfield.",
+        " What did the left eye say to the right eye?<br>Between us, something smells.",
+        " What did one plate say to the other plate?<br>Dinner is on me.",
+        " Why did the student eat his homework?<br>Because the teacher told him it was a piece of cake.",
+      ];
+      
+      // fetching a joke from the array using random
+      let rand_joke_index = Math.floor(Math.random() * jokes_arr.length);
+      let rand_joke = jokes_arr[rand_joke_index];
+      
+      //inserting the joke in the HTML text container
+      let txt = document.getElementsByClassName("txt").item(0);
+      txt.innerHTML = rand_joke;
+
+      //creating a colors array
+      let colors_arr = [
+        "#FF6633",
+        "#FFB399",
+        "#FF33FF",
+        "#FFFF99",
+        "#00B3E6",
+        "#E6B333",
+        "#3366E6",
+        "#999966",
+        "#99FF99",
+        "#B34D4D",
+        "#80B300",
+        "#809900",
+        "#E6B3B3",
+        "#6680B3",
+        "#66991A",
+        "#FF99E6",
+        "#CCFF1A",
+        "#FF1A66",
+        "#E6331A",
+        "#33FFCC",
+        "#66994D",
+        "#B366CC",
+        "#4D8000",
+        "#B33300",
+        "#CC80CC",
+        "#66664D",
+        "#991AFF",
+        "#E666FF",
+        "#4DB3FF",
+        "#1AB399",
+        "#E666B3",
+        "#33991A",
+        "#CC9999",
+        "#B3B31A",
+        "#00E680",
+        "#4D8066",
+        "#809980",
+        "#E6FF80",
+        "#1AFF33",
+        "#999933",
+        "#FF3380",
+        "#CCCC00",
+        "#66E64D",
+        "#4D80CC",
+        "#9900B3",
+        "#E64D66",
+        "#4DB380",
+        "#FF4D4D",
+        "#99E6E6",
+        "#6666FF",
+      ];
+
+      // fetching a color from the array using random
+      let rand_color_index = Math.floor(Math.random() * colors_arr.length);
+      let rand_color = colors_arr[rand_color_index];
+
+      // events when clicked on the button by the user
+      document.getElementsByTagName("button").item(0).onclick = function () {
+
+        // fetch and insert another random joke if clicked
+        rand_joke_index = Math.floor(Math.random() * jokes_arr.length);
+        rand_joke = jokes_arr[rand_joke_index];
+        txt.innerHTML = rand_joke;
+
+        //fetch a random color from the array 
+        rand_color_index = Math.floor(Math.random() * colors_arr.length);
+        rand_color = colors_arr[rand_color_index];
+        //change the background-color of the web page
+        document.getElementsByTagName("main").item(0).style.backgroundColor =
+          rand_color;
+      };
+    </script>
+  </body>
+</html>
